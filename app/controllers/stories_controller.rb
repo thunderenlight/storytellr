@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
 	before_action :find_story, only: [:destroy, :show, :edit, :destroy]
+	before_action :load_activities, only: [:index, :show, :new, :edit]
 
 	def index
 		@stories = Story.order('created_at DESC')
@@ -48,6 +49,10 @@ class StoriesController < ApplicationController
 
 	def find_story
 		@story = Story.find(params[:id])
+	end
+
+	def load_activities
+		@activities = PublicActivity::Activity.order('created_at DESC').limit(20)
 	end
 
 
