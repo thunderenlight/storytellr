@@ -7,7 +7,7 @@ class StoriesController < ApplicationController
 	end
 
 	def new
-		story = Story.new
+		@story = Story.new
 	end
 
 	def create
