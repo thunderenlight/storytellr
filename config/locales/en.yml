@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # hello: "Hello world"
+  activity: 
+    story:
+      create:  'has told his or her story'
+      update:  'has edited the story'
+      destroy: 'has removed the story'
+      like:    'has liked the story'
