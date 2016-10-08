@@ -3,6 +3,7 @@
    		<% @activities.each do |activity|  %>
 		   	<li class="list-group-item">
 		   		<span class="glyphicon glyphicon-<%=  activity.key.match(/\.(.*)/)[1] %>"></span>
+		   		<small class="text-muted"><%= activity.created_at.strftime('%H:%M:%S %-d %B %Y') %></small><br/>
 		   		<strong> <%= activity.owner ? activity.owner.name : 'Guest' %></strong>
 		   		<%= render_activity activity, display: :i18n %>
 		   		<% if activity.trackable %>
