@@ -47,7 +47,7 @@ class StoriesController < ApplicationController
 			@story.increment!(:likes)
 		end
 		@story.create_activity :like
-		flash[:success] = 'Thanks for sharing your opinion!'
+		flash[:success] = 'Thanks for sharing your feedback!'
 		redirect_to story_path(@story)
 	end
 
