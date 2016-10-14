@@ -5,6 +5,8 @@ class Story < ActiveRecord::Base
   		  title: proc { |controller, model| model.title }
 
   belongs_to :user
+  has_many :story_tags, dependent: :true 
+  has_many :tags, through: :story_tags
 
   validates :title, presence: true
   validates :body, presence: true

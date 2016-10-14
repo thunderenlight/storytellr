@@ -53,7 +53,7 @@ class StoriesController < ApplicationController
 
 	private
 	def story_params
-		params.require(:story).permit(:title, :body)
+		params.require(:story).permit(:title, :body, tag_ids: [])
 	end
 
 	def find_story
