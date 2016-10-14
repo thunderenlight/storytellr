@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :stories
+	has_many :user_tags, dependent: :destroy
+	has_many :tags, through: :user_tags
 
 	class << self
 	  def from_omniauth(auth)

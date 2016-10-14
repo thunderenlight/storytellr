@@ -7,6 +7,9 @@
     <h2><%= link_to story.title, story_path(story) %></h2>
 
     <p><%= truncate(story.body, length: 350) %></p>
+    <% if story.tags.any? %>
+    	<p>Tags: <%= render story.tags %></p>
+    <% end %>
 
     <div class="btn-group">
       <%= link_to 'Edit', edit_story_path(story), class: 'btn btn-info' %>
