@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'users/edit'
+
+  get 'users/update'
+
   resources :stories do 
     member do 
       post :like
     end
   end
   
+  resources :users, only: [:edit, :update]
   delete '/logout', to: 'sessions#destroy', as: :logout
   get '/auth/:provider/callback', to: 'sessions#create'
 
