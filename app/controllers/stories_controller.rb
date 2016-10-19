@@ -51,6 +51,11 @@ class StoriesController < ApplicationController
 		redirect_to story_path(@story)
 	end
 
+	def feed
+		@my_interests = current_user.tag_ids
+		@stories = Story.select { |s| (s.tag_ids & @my_interests).any? }
+	end
+
 	private
 	def story_params
 		params.require(:story).permit(:title, :body, tag_ids: [])

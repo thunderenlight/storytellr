@@ -1,0 +1,14 @@
+<div class="col-md-8 col-md-offset-2">
+	<h1>Your feed</h1>
+	<% stories.each do |story| %>
+		<ul>
+			<li>
+				<h3><%= story.title %></h3>
+				<p><%= story.body %></p>
+				<% if story.tags.any? %>
+					<p>Tags: <%= render story.tags %></p>
+				<% end %>
+			</li>
+		</ul>
+	<% end %>
+</div>
