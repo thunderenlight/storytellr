@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 	before_action :find_user
+  before_action :load_activities, only: [:index, :show, :new, :edit]
+
 
   def edit
 
@@ -23,6 +25,10 @@ class UsersController < ApplicationController
 
  def user_params
  	params.require(:user).permit(tag_ids: [])
+ end
+ 
+ def load_activities
+      @activities = PublicActivity::Activity.order('created_at DESC').limit(20)
  end
 
 end

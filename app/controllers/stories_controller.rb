@@ -53,7 +53,11 @@ class StoriesController < ApplicationController
 
 	def feed
 		@my_interests = current_user.tag_ids
-		@stories = Story.select { |s| (s.tag_ids & @my_interests).any? }
+		if @my_interests.any?
+			@stories = Story.select { |s| (s.tag_ids & @my_interests).any? }
+		else
+			@stories = Story.all 
+		end
 	end
 
 	private
