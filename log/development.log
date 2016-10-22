@@ -6397,3 +6397,882 @@ Processing by StoriesController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
   Rendered shared/_activities.html.erb (39.2ms)
 Completed 200 OK in 183ms (Views: 177.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 17:35:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  [1m[36mTag Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 7]]
+  [1m[35mTag Load (0.9ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (1.4ms)
+  [1m[36mTag Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 6]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (1.3ms)
+  [1m[36mTag Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 5]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[36mTag Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/index.html.erb within layouts/application (208.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.1ms)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.1ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (232.8ms)
+Completed 200 OK in 1521ms (Views: 1296.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-10-20 17:35:05 -0500
+
+
+Started GET "/" for ::1 at 2016-10-20 17:35:09 -0500
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 5]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered stories/index.html.erb within layouts/application (48.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.5ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (28.6ms)
+Completed 200 OK in 173ms (Views: 166.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/stories/7" for ::1 at 2016-10-20 17:35:14 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered stories/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.6ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.2ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (52.4ms)
+Completed 200 OK in 128ms (Views: 124.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stories/7/feed" for ::1 at 2016-10-20 17:35:32 -0500
+
+ActionController::RoutingError (No route matches [GET] "/stories/7/feed"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (50.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (261.7ms)
+
+
+Started GET "/stories/" for ::1 at 2016-10-20 17:38:37 -0500
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  [1m[36mTag Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/index.html.erb within layouts/application (24.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.3ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (29.9ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/stories/7" for ::1 at 2016-10-20 17:38:41 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered stories/show.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.3ms)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (41.1ms)
+Completed 200 OK in 112ms (Views: 108.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/stories/" for ::1 at 2016-10-20 17:40:38 -0500
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 7]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.4ms)
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 6]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.4ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 5]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered stories/index.html.erb within layouts/application (35.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.3ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.4ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.1ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (40.7ms)
+Completed 200 OK in 143ms (Views: 137.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/application.self-dbcd5bf98ed42a3084f69edad7760e95e6f5bec7a6fe68e7ba536d14f2d20b91.css?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/chosen.self-2ed0a8c7b9f76e615fb8dfc33b56bae303f7ba5e2d304401469e05393bc16043.css?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/lib/abstract-chosen.self-0c1e039093e5defc07dae18bf8166ea4197fe6504b11230e032a0f0426e94dd1.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/lib/select-parser.self-5d5368d17f7cdcd87e6de78a152edb0e8bb03d0d645563f4076921a10855fd67.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/chosen.jquery.self-3aaa15fd02d5c184ee4b452355a27e803b18c23746f58ca039b150931da32494.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/chosen-jquery.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-10-20 17:40:38 -0500
+
+
+Started GET "/users/1/edit" for ::1 at 2016-10-20 17:41:59 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.5ms)[0m  SELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".id FROM "tags" INNER JOIN "user_tags" ON "tags"."id" = "user_tags"."tag_id" WHERE "user_tags"."user_id" = ?  [["user_id", 1]]
+  Rendered users/edit.html.erb within layouts/application (163.4ms)
+  [1m[36mPublicActivity::Activity Load (0.4ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (24.0ms)
+Completed 200 OK in 263ms (Views: 258.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 17:47:10 -0500
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 7]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.4ms)
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 6]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.3ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 5]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.4ms)
+  [1m[35mTag Exists (0.3ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 4]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mTag Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered stories/index.html.erb within layouts/application (53.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.4ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.3ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered text template (0.1ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (39.4ms)
+Completed 200 OK in 196ms (Views: 189.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/stories/7/edit" for ::1 at 2016-10-20 17:47:22 -0500
+Processing by StoriesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered shared/_errors.html.erb (0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"  ORDER BY "tags"."title" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered stories/_form.html.erb (59.1ms)
+  Rendered stories/_feed.html.erb (4.4ms)
+  Rendered stories/edit.html.erb within layouts/application (81.1ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="col-md-8 col-md-offset-2">
+    2: 	<h1>Your feed</h1>
+    3: 	<% @stories.each do |story| %>
+    4: 		<ul>
+    5: 			<li>
+    6: 				<h3><%= story.title %></h3>
+  app/views/stories/_feed.html.erb:3:in `_app_views_stories__feed_html_erb__1557509811040135917_70141988201560'
+  app/views/stories/edit.html.erb:3:in `_app_views_stories_edit_html_erb__4161137333169467769_70141984828320'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (228.3ms)
+
+
+Started GET "/stories/7/edit" for ::1 at 2016-10-20 17:48:22 -0500
+Processing by StoriesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"  ORDER BY "tags"."title" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".id FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered stories/_form.html.erb (14.5ms)
+  Rendered stories/edit.html.erb within layouts/application (18.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (34.8ms)
+Completed 200 OK in 159ms (Views: 153.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/application.self-dbcd5bf98ed42a3084f69edad7760e95e6f5bec7a6fe68e7ba536d14f2d20b91.css?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/lib/select-parser.self-5d5368d17f7cdcd87e6de78a152edb0e8bb03d0d645563f4076921a10855fd67.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/lib/abstract-chosen.self-0c1e039093e5defc07dae18bf8166ea4197fe6504b11230e032a0f0426e94dd1.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/chosen.self-2ed0a8c7b9f76e615fb8dfc33b56bae303f7ba5e2d304401469e05393bc16043.css?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/chosen-jquery.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/chosen.jquery.self-3aaa15fd02d5c184ee4b452355a27e803b18c23746f58ca039b150931da32494.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-10-20 17:48:22 -0500
+
+
+Started GET "/" for ::1 at 2016-10-20 17:48:26 -0500
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (28.4ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.9ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.3ms)
+  Rendered tags/_tag.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (14.6ms)
+  Rendered tags/_tag.html.erb (0.4ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.4ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (10.8ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (19.9ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.3ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (19.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  Rendered tags/_tag.html.erb (0.4ms)
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (13.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (12.0ms)
+  Rendered stories/index.html.erb within layouts/application (159.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.5ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (45.2ms)
+Completed 200 OK in 304ms (Views: 296.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 17:49:16 -0500
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  [1m[35mTag Exists (0.2ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 7]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 6]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 5]]
+  Rendered tags/_tag.html.erb (0.2ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ?[0m  [["story_id", 4]]
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 3]]
+  [1m[36mTag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 2]]
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 1]]
+  Rendered tags/_tag.html.erb (0.3ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  Rendered tags/_tag.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1  [["story_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "story_tags" ON "tags"."id" = "story_tags"."tag_id" WHERE "story_tags"."story_id" = ? LIMIT 1[0m  [["story_id", 1]]
+  Rendered stories/_feed.html.erb (9.7ms)
+  Rendered stories/index.html.erb within layouts/application (64.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.8ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (1.3ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (41.1ms)
+Completed 200 OK in 417ms (Views: 410.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/application.self-dbcd5bf98ed42a3084f69edad7760e95e6f5bec7a6fe68e7ba536d14f2d20b91.css?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/chosen.self-2ed0a8c7b9f76e615fb8dfc33b56bae303f7ba5e2d304401469e05393bc16043.css?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/lib/abstract-chosen.self-0c1e039093e5defc07dae18bf8166ea4197fe6504b11230e032a0f0426e94dd1.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/lib/select-parser.self-5d5368d17f7cdcd87e6de78a152edb0e8bb03d0d645563f4076921a10855fd67.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/chosen.jquery.self-3aaa15fd02d5c184ee4b452355a27e803b18c23746f58ca039b150931da32494.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/chosen-jquery.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-10-20 17:49:17 -0500
