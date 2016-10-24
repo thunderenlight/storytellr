@@ -3,7 +3,13 @@ class StoriesController < ApplicationController
 	before_action :load_activities, only: [:index, :show, :new, :edit]
 
 	def index
-		@stories = Story.order('created_at DESC')
+		# @stories = Story.order('created_at DESC')
+		@my_interests = current_user.tag_ids
+		if @my_interests.any?
+			@stories = Story.select { |s| (s.tag_ids & @my_interests).any? }
+		else
+			@stories = Story.all
+		end
 	end
 
 	def new
